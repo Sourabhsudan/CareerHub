@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "849868751685",
+    "firebase_url": "https://careerhub-d9be7-default-rtdb.firebaseio.com",
+    "project_id": "careerhub-d9be7",
+    "storage_bucket": "careerhub-d9be7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849868751685:android:0780a9b55ff88283f1b42c",
+        "android_client_info": {
+          "package_name": "com.example.careerhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_RE-CrRcjlBwZMqd3eaEJ6VtWPydMVGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849868751685:android:36e5d196afc8d874f1b42c",
+        "android_client_info": {
+          "package_name": "com.example.careerhub_gp1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_RE-CrRcjlBwZMqd3eaEJ6VtWPydMVGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
