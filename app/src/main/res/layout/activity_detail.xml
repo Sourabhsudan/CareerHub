@@ -79,7 +79,7 @@
         tools:text="Address" />
 
     <TextView
-        android:id="@+id/contactTextView"
+        android:id="@+id/qualificationTextView"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
