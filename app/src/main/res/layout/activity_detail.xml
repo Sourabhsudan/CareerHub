@@ -1,33 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:src="@drawable/logo"
-        android:contentDescription="@string/logo"/>
+        android:id="@+id/detailImageView"
+        android:layout_width="312dp"
+        android:layout_height="292dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="49dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/CandidateName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:text="TextView" />
+        android:layout_below="@id/detailImageView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Candidate name" />
+
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/userIdTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:text="TextView" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="375dp"
+        android:layout_marginEnd="342dp"
+        android:layout_marginBottom="334dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:text="User Id" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="407dp"
+        android:layout_marginEnd="342dp"
+        android:layout_marginBottom="302dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:text="Email" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="439dp"
+        android:layout_marginEnd="326dp"
+        android:layout_marginBottom="270dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:text="Address" />
+
+    <TextView
+        android:id="@+id/contactTextView"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="473dp"
+        android:layout_marginEnd="293dp"
+        android:layout_marginBottom="236dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:text="Qualification" />
+
+    <TextView
+        android:id="@+id/experienceTextView"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="509dp"
+        android:layout_marginEnd="293dp"
+        android:layout_marginBottom="200dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:text="Experience" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="147dp"
+        android:text="lorem_ipsum_is_simply_text_of_the_printing_and_typesetting_industry_lorem_ips"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/connect"
+        android:layout_width="376dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:text="Button" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/input"
+        android:text="CONNECT"
+        android:textColor="#000000" />
+
 </RelativeLayout>
