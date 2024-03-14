@@ -1,3 +1,8 @@
+package com.example.careerhub.Models
+
+
+
+
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +11,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.careerhub.CandidateActivity
-import com.example.careerhub.Models.CandidateData
 import com.example.careerhub.R
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
@@ -36,7 +39,7 @@ class CandidateAdapter(options: FirebaseRecyclerOptions<CandidateData>) : Fireba
     }
 
     class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(inflater.inflate(R.layout.item_candidate, parent, false)) {
-        val txtName: TextView = itemView.findViewById(R.id.imgPhoto)
+        val txtName: TextView = itemView.findViewById(R.id.txtName)
         val imgPhoto: ImageView = itemView.findViewById(R.id.imgPhoto)
         val cardItem: LinearLayout = itemView.findViewById(R.id.linearRow)
     }

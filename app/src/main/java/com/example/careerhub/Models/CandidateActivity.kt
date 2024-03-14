@@ -1,11 +1,12 @@
-package com.example.careerhub
+package com.example.careerhub.Models
 
-import CandidateAdapter
+
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.careerhub.Models.CandidateData
+import com.example.careerhub.R
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.database.FirebaseDatabase
 
@@ -29,5 +30,5 @@ class  CandidateActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         adapter?.startListening()
-        }
+    }
 }
