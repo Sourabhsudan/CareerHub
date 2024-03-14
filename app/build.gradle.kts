@@ -39,8 +39,12 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation ("com.github.bumptech.glide:glide:4.11.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
+    implementation ("com.firebaseui:firebase-ui-database:8.0.0")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("com.google.firebase:firebase-storage:8.0.2")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-database:20.3.1")
     testImplementation("junit:junit:4.13.2")
