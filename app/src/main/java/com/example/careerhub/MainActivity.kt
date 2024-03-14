@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.careerhub.Models.UserPost
-import com.example.careerhub.Models.UserPostAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.database.FirebaseDatabase
 
@@ -19,9 +17,9 @@ class MainActivity : AppCompatActivity() {
         val options = FirebaseRecyclerOptions.Builder<UserPost>().setQuery(query, UserPost::class.java).build()
         adapter = UserPostAdapter(options)
 
-        val postrView : RecyclerView = findViewById(R.id.postrView)
-        postrView.layoutManager= LinearLayoutManager(this)
-        postrView.adapter = adapter
+        val prView : RecyclerView = findViewById(R.id.prView)
+        prView.layoutManager= LinearLayoutManager(this)
+        prView.adapter = adapter
 
     }
 

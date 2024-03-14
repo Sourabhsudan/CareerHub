@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+
     tools:context=".MainActivity">
 
 
@@ -13,9 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
-        android:id="@+id/postrView"
+        android:id="@+id/prView"
         />
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/blue"/>
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="131dp"
@@ -23,6 +26,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         app:srcCompat="@drawable/mainlogo" />
+
 
 
 </RelativeLayout>
