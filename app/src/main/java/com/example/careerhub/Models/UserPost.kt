@@ -1,6 +1,8 @@
 package com.example.careerhub.Models
 
 data class UserPost (
-    var Post : String =""
+    var description : String ="",
+    var image : String="",
+    var username : String=""
 ){
 }
