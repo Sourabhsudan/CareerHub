@@ -12,12 +12,21 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         val imgView = findViewById<ImageView>(R.id.detailImageView)
-        val name = findViewById<TextView>(R.id.CandidateName)
-        val userId = findViewById<TextView>(R.id.userIdTextView)
-        val email = findViewById<TextView>(R.id.emailTextView)
-        val address = findViewById<TextView>(R.id.addressTextView)
-        val qualification = findViewById<TextView>(R.id.qualificationTextView)
-        val experience = findViewById<TextView>(R.id.experienceTextView)
+        val txtName = findViewById<TextView>(R.id.CandidateName)
+        val txtUserId = findViewById<TextView>(R.id.userIdTextView)
+        val txtEmail = findViewById<TextView>(R.id.emailTextView)
+        val txtAddress = findViewById<TextView>(R.id.addressTextView)
+        val txtQualification = findViewById<TextView>(R.id.qualificationTextView)
+        val txtExperience = findViewById<TextView>(R.id.experienceTextView)
+
+        val img = intent.getStringExtra("profile_img")
+        val name = intent.getStringExtra("user_name")
+        val userId = intent.getStringExtra("user_id")
+        val email = intent.getStringExtra("email")
+        val address = intent.getStringExtra("address")
+        val qualification = intent.getStringExtra("qualifications")
+        val experience = intent.getStringExtra("experience")
+
 
     }
 }
