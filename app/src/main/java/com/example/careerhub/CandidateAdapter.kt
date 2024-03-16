@@ -22,7 +22,8 @@ class CandidateAdapter : RecyclerView.Adapter<CandidateAdapter.CandidateViewHold
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CandidateViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.candidate_list, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.candidate_list, parent, false)
         return CandidateViewHolder(itemView)
     }
 
@@ -41,9 +42,6 @@ class CandidateAdapter : RecyclerView.Adapter<CandidateAdapter.CandidateViewHold
     override fun getItemCount(): Int {
         return candidateList.size
     }
-
-    fun setCandidates(candidates: List<CandidateData>) {
-        candidateList = candidates
-        notifyDataSetChanged()
-    }
 }
+
+

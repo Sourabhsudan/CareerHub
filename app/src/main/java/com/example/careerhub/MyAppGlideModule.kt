@@ -1,7 +1,6 @@
 package com.example.careerhub
 
 import android.content.Context
-import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Registry
 import com.bumptech.glide.annotation.GlideModule
@@ -20,11 +19,5 @@ class MyAppGlideModule : AppGlideModule() {
         )
     }
 
-    object GlideLoader {
-        fun loadImage(context: Context, imageUrl: String, imageView: ImageView) {
-            Glide.with(context)
-                .load(imageUrl)
-                .into(imageView)
-        }
+
     }
-}
