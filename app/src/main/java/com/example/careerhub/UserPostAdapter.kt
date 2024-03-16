@@ -20,13 +20,13 @@ FirebaseRecyclerAdapter<UserPost, UserPostAdapter.MyViewHolder>(options)
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): UserPostAdapter.MyViewHolder {
+    ): MyViewHolder {
        val inflater = LayoutInflater.from(parent.context)
         return MyViewHolder(inflater, parent)
     }
 
     override fun onBindViewHolder(
-        holder: UserPostAdapter.MyViewHolder,
+        holder: MyViewHolder,
         position: Int,
         model: UserPost
     ) {
