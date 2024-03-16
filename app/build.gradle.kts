@@ -3,12 +3,18 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
     id("kotlin-kapt")
+
+    
 }
 
 android {
     namespace = "com.example.careerhub"
     compileSdk = 34
 
+
+    buildFeatures {
+        dataBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.careerhub"
         minSdk = 29
@@ -18,6 +24,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -40,6 +47,8 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.2.2")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
     implementation("com.github.bumptech.glide:glide:4.16.0")
