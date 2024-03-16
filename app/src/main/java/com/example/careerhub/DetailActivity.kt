@@ -1,10 +1,14 @@
 package com.example.careerhub
 
+import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +30,23 @@ class DetailActivity : AppCompatActivity() {
         val address = intent.getStringExtra("address")
         val qualification = intent.getStringExtra("qualifications")
         val experience = intent.getStringExtra("experience")
+
+        Glide.with(this).load(img).into(imgView)
+        txtName.text = name
+        txtUserId.text = userId
+        txtEmail.text = email
+        txtAddress.text = address
+        txtQualification.text = qualification
+        txtExperience.text = experience
+
+        val connectButton = findViewById<Button>(R.id.connect)
+        connectButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show()
+        }
+
+
 
 
     }
