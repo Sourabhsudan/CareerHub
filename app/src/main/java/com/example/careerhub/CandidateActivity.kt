@@ -20,14 +20,18 @@ class CandidateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_candidate)
-        recyclerView = findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        adapter = CandidateAdapter()
-        recyclerView.adapter = adapter
-
+        setupRecyclerView()
         loadCandidateData()
     }
+
+    private fun setupRecyclerView() {
+        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = CandidateAdapter()
+        recyclerView.adapter = adapter
+    }
+
 
     private fun loadCandidateData() {
         candidateDataCollection.get()
