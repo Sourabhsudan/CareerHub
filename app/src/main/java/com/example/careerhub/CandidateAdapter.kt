@@ -27,21 +27,22 @@ class CandidateAdapter : RecyclerView.Adapter<CandidateAdapter.CandidateViewHold
         return CandidateViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: CandidateViewHolder, position: Int) {
-        val currentItem = candidateList[position]
 
-        Glide.with(holder.itemView.context)
-            .load(currentItem.profile_img)
-            .into(holder.profileImg)
+    override  fun  onBindViewHolder  (holder:  CandidateViewHolder , position: Int )  {
 
-        holder.userName.text = currentItem.user_name
-        holder.userExp.text = currentItem.experience
-        holder.userEmail.text = currentItem.email
+               val currentItem =  candidateList[position]
+
+             Glide.with(holder.itemView.context)
+                 .load(currentItem.profile_img)
+                 .into(holder.profileImg )
+
+                  holder.userEmail.text = currentItem.email
+                  holder.userExp.text =   currentItem.experience
+                  holder.userName.text = currentItem.user_name
+
     }
 
-    override fun getItemCount(): Int {
-        return candidateList.size
-    }
-}
+        override fun getItemCount(): Int {
+               return candidateList.size
 
-
+        }        }
