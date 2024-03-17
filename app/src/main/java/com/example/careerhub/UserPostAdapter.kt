@@ -1,5 +1,6 @@
 package com.example.careerhub
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -34,7 +35,15 @@ FirebaseRecyclerAdapter<UserPost, UserPostAdapter.MyViewHolder>(options)
         Glide.with(holder.userImg.context).load(storageRef).into(holder.userImg)
        holder.userName.text = model.username
         holder.postDescription.text = model.description
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, CandidateActivity::class.java)
+            intent.putExtra("username", model.username)
+            context.startActivity(intent)
+        }
     }
+
     class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup)
         :RecyclerView.ViewHolder(inflater. inflate(R.layout.post_layout, parent, false) )
     {
