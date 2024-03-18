@@ -12,18 +12,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/navigation"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
         android:src="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/CandidateName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detailImageView"
+        android:layout_below="@id/navigation"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -37,7 +36,7 @@
         android:layout_below="@+id/CandidateName"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
         android:textSize="16sp"
         tools:text="User Id" />
@@ -48,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/userIdTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
         android:textSize="16sp"
         tools:text="Email" />
@@ -59,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/emailTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
         android:textSize="16sp"
         tools:text="Address" />
@@ -70,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/addressTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
         android:textSize="16sp"
         tools:text="Qualification" />
@@ -81,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/qualificationTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
 
         android:textColor="#000000"
         android:textSize="16sp"
@@ -93,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/experienceTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="lorem ipsum is simply text of the printing and typesetting industr lorem ips"
         android:textColor="#000000"
         android:textSize="16sp" />

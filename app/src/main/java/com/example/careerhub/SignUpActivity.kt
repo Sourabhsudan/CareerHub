@@ -1,44 +1,42 @@
 package com.example.careerhub
 
-import SignInActivity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
-
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignUpBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_sign_up)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.textView.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
+        findViewById<TextView>(R.id.SignIn).setOnClickListener {
+            startActivity(Intent(this, SignInActivity::class.java))
         }
-        binding.button.setOnClickListener {
-            val email = binding.Email.text.toString()
-            val password = binding.password.text.toString()
-            val confPassword = binding.confPassword.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty() && confPassword.isNotEmpty()) {
+        findViewById<Button>(R.id.buttonSignUp).setOnClickListener {
+            val fullName = findViewById<EditText>(R.id.FullName).text.toString()
+            val email = findViewById<EditText>(R.id.Email).text.toString()
+            val password = findViewById<EditText>(R.id.Password).text.toString()
+            val confPassword = findViewById<EditText>(R.id.confPassword).text.toString()
+
+            if (fullName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && confPassword.isNotEmpty()) {
                 if (password == confPassword) {
-
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, SignInActivity::class.java)
-                            startActivity(intent)
-                        } else {
+                            Toast.makeText(this, "Sign-up successful", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, SignInActivity::class.java))
+                       } else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
                         }
                     }
                 } else {
@@ -46,7 +44,6 @@ class SignUpActivity : AppCompatActivity() {
                 }
             } else {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
-
             }
         }
     }
