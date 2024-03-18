@@ -14,7 +14,7 @@ class IntroActivity : AppCompatActivity(){
 
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
-            startActivity((Intent(this, MainActivity::class.java)))
+            startActivity((Intent(this, SignInActivity::class.java)))
             finish()
         }, Splash_Delay)
 

@@ -30,6 +30,8 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
         val buttonSignIn = findViewById<Button>(R.id.buttonSignIn)
         buttonSignIn.setOnClickListener {
             val email = findViewById<EditText>(R.id.email).text.toString()
@@ -40,7 +42,7 @@ class SignInActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         startActivity(Intent(this, MainActivity::class.java))
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Incorrect Password", Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {

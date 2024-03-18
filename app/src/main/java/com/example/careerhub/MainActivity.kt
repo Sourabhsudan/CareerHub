@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.careerhub.Models.UserPost
 import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +30,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CandidateActivity::class.java))
         }
         signOutButton.setOnClickListener {
+
+            FirebaseAuth.getInstance().signOut()
+
             startActivity(Intent(this, SignInActivity::class.java))
+
+            finish()
         }
 
         val query = FirebaseDatabase.getInstance().reference.child("UserPost")

@@ -35,7 +35,7 @@ class SignUpActivity : AppCompatActivity() {
                         if (it.isSuccessful) {
                             Toast.makeText(this, "Sign-up successful", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this, SignInActivity::class.java))
-                       } else {
+                        } else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                         }
                     }
